@@ -1,0 +1,27 @@
+<?xm	l version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/product" xmlns:tns="http://www.example.org/product" elementFormDefault="qualified">
+<element name="productlist">
+	<complexType>
+		<sequence>
+			<element ref="tns:product" minOccurs="1" maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType>
+</element>
+<element name="product">
+	<complexType>
+		<sequence>
+			<element name="sku" type="string" minOccurs="1" />
+			<element name="description" type="string" />
+			<element name="price" type="double" minOccurs="1" />
+			<element name="manufacturer" type="string" />
+		</sequence>
+		<attribute ref="tns:activefrom" />
+	</complexType>
+</element>
+<complexType name="manufacturer">
+	<sequence>
+	   <element name="name" type="string" />
+	</sequence>
+</complexType>
+<attribute name="activefrom" type="date" />
+</schema>

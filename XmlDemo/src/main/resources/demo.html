@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo of XML</title>
+</head>
+<body>
+<h1>Learning XML!</h1>
+<ul id="list01">
+</ul>
+<script>
+var xml =`<books lastUpdated="2018-03-07" xmlns="http://www.example.org/books" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.example.org/books books.xsd ">
+			<book myid="b1">
+			  	<title>Book1</title>
+			  	<price>100</price>
+			  	<author>Bob</author>
+			  	<author>Sue</author>
+			</book>
+			<book myid="b2">
+				<title>Book2</title>
+				<price>100.00</price>
+				<author>Arnold</author>
+			</book>
+			<author>
+				<name>Bob</name>
+				<work>b1</work>
+			</author>
+		</books>`;
+var parser = new DOMParser();
+var doc = parser.parseFromString(xml,"text/xml");
+var books = doc.getElementsByTagName("book");
+var ul  = document.getElementById("list01");
+
+for (var i=0; i<books.length;i++){
+	console.log(books[i].getElementsByTagName("title")[0].textContent);
+	var li = document.createElement("li");
+	li.innerText= books[i].getElementsByTagName("title")[0].textContent;
+	ul.appendChild(li);	
+}
+</script>
+
+</body>
+</html>

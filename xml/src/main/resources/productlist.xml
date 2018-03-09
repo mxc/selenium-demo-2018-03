@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:productlist xmlns:tns="http://www.example.org/product" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.example.org/product target/classes/product.xsd "> 
+<tns:product>
+  <tns:sku>tns:sku</tns:sku>
+  <tns:description>tns:description</tns:description>
+  <tns:price>0.0</tns:price>
+  <tns:manufacturer>tns:manufacturer</tns:manufacturer>
+</tns:product>
+<tns:product>
+  <tns:sku>tns:sku</tns:sku>
+  <tns:description>tns:description</tns:description>
+  <tns:price>100</tns:price>
+  <tns:manufacturer>ABC Co</tns:manufacturer>
+</tns:product>
+</tns:productlist>

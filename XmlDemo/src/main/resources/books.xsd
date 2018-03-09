@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/books" 
+xmlns:tns="http://www.example.org/books" 
+elementFormDefault="qualified">
+<element name="books">
+ <complexType>
+ 	<sequence>
+ 		<element name="book" maxOccurs="unbounded" 
+ 		minOccurs="1" type="tns:bookType" />
+		<element name="author" type="tns:authorType" 
+		maxOccurs="unbounded" />
+ 	</sequence>
+ 	<attribute name="lastUpdated" type="date" use="required" />
+ </complexType>
+</element>
+
+<complexType name="authorType">
+<sequence>
+	<element name="name" type="string" />
+	<element name="work" type="IDREFS" />
+</sequence>
+</complexType>
+
+<complexType name="bookType">
+<sequence>
+	<element name="title" type="string" />
+	<element name="price" type="double" minOccurs="0" />
+	<element name="author" type="string" maxOccurs="unbounded" />
+</sequence>
+<attribute name="isbn" type="string"/>
+<attribute name="myid"  type="ID" use="required"/>
+</complexType>
+
+</schema>

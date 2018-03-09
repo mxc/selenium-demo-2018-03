@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<productlist  xlmns="http://www.demo.co.za">
+	<product>
+		<sku>01</sku>
+		<name>Ubuntu Linux 16.04</name>
+		<price currency="USD">100</price>
+		<qty>100</qty>
+		<description>The latest long term support version of Ubuntu Linux
+		</description>
+	</product>
+	<product>
+		<sku>02</sku>
+		<name>Suse Linux 11.1</name>
+		<price currency="ZAR">300</price>
+		<description>Suse Linux enterprise distribution</description>
+		<qt>50</qt>
+	</product>
+	<prod>
+		<sku>02</sku>
+		<name>Suse Linux 11.1</name>
+		<price currency="EUR">300</price>
+		<description>
+		<![CDATA[
+			Suse <Linux> enterprise distribution
+		]]>
+		</description>
+		<qt>50</qt>
+		<available since="2017-06-01"/>
+	</prod>
+	<product>
+		<sku>02</sku>
+		<name>Free BSD 11</name>
+		<price currency="BTC">0.1</price>
+		<description>Robust BSD OS</description>
+		<qt>50</qt>
+	</product>
+</productlist>
